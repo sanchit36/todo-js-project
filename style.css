@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #20206b;
+}
+
+.app {
+  max-width: 400px;
+  width: 80%;
+  height: 80vh;
+  padding: 1em 3em;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35),
+    2px 1px 10px inset rgba(0, 0, 0, 0.35);
+  border-radius: 1em;
+  text-align: center;
+  background-color: #e0e0e0;
+}
+
+.todolist {
+  height: 50vh;
+  overflow-y: auto;
+}
+
+.title {
+  height: 10vh;
+  font-size: 3rem;
+  line-height: 10vh;
+  margin: 0;
+  margin-bottom: 0.35em;
+  position: relative;
+  z-index: 1;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  height: 7px;
+  left: 55%;
+  width: 105px;
+  border-radius: 5px;
+  z-index: -1;
+  background-color: #20206b;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+input {
+  font-size: 1.2rem;
+  padding: 0.25em 0.5em;
+  border: none;
+  border-radius: 0.25em;
+}
+input {
+  margin-bottom: 0.5em;
+}
+button {
+  background-color: #20206b;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  text-transform: uppercase;
+}
+
+button.btn-del {
+  background-color: rgb(185, 9, 9);
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.todo-item {
+  height: 7vh;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-content: center;
+  grid-gap: 0.25em;
+  border-bottom: 1px solid #20206b;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.text {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.complete {
+  text-decoration: line-through;
+}
